@@ -23,4 +23,4 @@ This project provides a consistent, automated view of macro‑level housing cond
 
 ## Live Report
 Once GitHub Pages is enabled, the report will be available at:
-`https://<your-username>.github.io/<repo-name>/`
+https://rmallorybpc.github.io/housing-market-intel/
