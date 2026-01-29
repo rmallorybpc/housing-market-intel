@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Market Intelligence Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a5f7a;
+            border-bottom: 3px solid #1a5f7a;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2a7f9a;
+            margin-top: 30px;
+            border-left: 5px solid #1a5f7a;
+            padding-left: 15px;
+        }
+        .timestamp {
+            color: #666;
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .data-source {
+            background-color: #f9f9f9;
+            border-left: 4px solid #1a5f7a;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #1a5f7a;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Real Estate Market Intelligence Report</h1>
+        <p class="timestamp">Updated Weekly: 2026-01-29 16:12:01</p>
+        
+        <h2>Executive Summary</h2>
+        <div class="section">
+            <p>This comprehensive report analyzes the current real estate market landscape across key indicators including median home prices, inventory levels, delinquency trends, and housing supply dynamics.</p>
+            <p>Report generated from data sources including Redfin market tracker, Realtor.com inventory data, CFPB mortgage performance metrics, and U.S. Census housing indicators.</p>
+        </div>
+        
+        <h2>Median Home Price Trends</h2>
+        <div class="section">
+            <div class="data-source">
+                <strong>Data Source:</strong> Redfin Market Tracker<br>
+                <strong>Latest Data:</strong> 2026-01-29 16:12:01
+            </div>
+            <p>The Redfin dataset provides week-over-week and year-over-year median home price comparisons, tracking price movements across major markets.</p>
+        </div>
+        
+        <h2>Supply vs Demand Indicators</h2>
+        <div class="section">
+            <div class="data-source">
+                <strong>Inventory & Active Listings Data:</strong> Realtor.com Research<br>
+                <strong>Vacancy & Construction Data:</strong> U.S. Census API
+            </div>
+            <p>Key metrics include active listing counts, inventory-to-sales ratios, vacancy rates, and new construction starts providing insight into supply dynamics.</p>
+        </div>
+        
+        <h2>Foreclosure & Delinquency Trends</h2>
+        <div class="section">
+            <div class="data-source">
+                <strong>Data Source:</strong> Consumer Financial Protection Bureau (CFPB)<br>
+                <strong>Metrics:</strong> Mortgage delinquency rates and foreclosure indicators
+            </div>
+            <p>CFPB data tracks mortgage performance metrics, delinquency trends, and foreclosure activity, providing indicators of housing market stress.</p>
+        </div>
+        
+        <h2>Mortgage Environment</h2>
+        <div class="section">
+            <p>The mortgage environment includes current lending standards, interest rate trends, and regulatory updates affecting the housing market.</p>
+            <div class="warning">
+                <strong>Note:</strong> Mortgage policy data including 50-year mortgage updates, lending standard changes, and regulatory announcements are collected via web search and integrated into this report.
+            </div>
+        </div>
+        
+        <h2>Notable Regional & National Shifts</h2>
+        <div class="section">
+            <p>This section highlights significant market movements and notable changes in the real estate landscape based on the latest available data.</p>
+            <ul>
+                <li>National market trends</li>
+                <li>Regional price variations</li>
+                <li>Inventory imbalances</li>
+                <li>Lending environment changes</li>
+            </ul>
+        </div>
+        
+        <h2>Data Source Notes</h2>
+        <div class="section">
+            <table>
+                <tr>
+                    <th>Data Source</th>
+                    <th>Type</th>
+                    <th>Update Frequency</th>
+                </tr>
+                <tr>
+                    <td>Redfin Market Tracker</td>
+                    <td>CSV</td>
+                    <td>Weekly</td>
+                </tr>
+                <tr>
+                    <td>Realtor.com Research</td>
+                    <td>CSV</td>
+                    <td>Weekly</td>
+                </tr>
+                <tr>
+                    <td>CFPB Mortgage Performance</td>
+                    <td>CSV</td>
+                    <td>Monthly</td>
+                </tr>
+                <tr>
+                    <td>U.S. Census Bureau API</td>
+                    <td>JSON</td>
+                    <td>Monthly/Quarterly</td>
+                </tr>
+                <tr>
+                    <td>Mortgage Policy & Lending Trends</td>
+                    <td>Web Search</td>
+                    <td>Weekly</td>
+                </tr>
+            </table>
+            <p><strong>Report Methodology:</strong> This report synthesizes data from multiple public sources to provide comprehensive market intelligence. Data is fetched via HTTP GET requests from public CSV and API endpoints.</p>
+        </div>
+        
+        <div class="footer">
+            <p>This report is automatically generated every Monday at 9:00 AM and published to GitHub Pages.</p>
+            <p>Repository: <a href="https://github.com/rmallorybpc/housing-market-intel" target="_blank">rmallorybpc/housing-market-intel</a></p>
+            <p>Last Updated: 2026-01-29 16:12:01</p>
+        </div>
+    </div>
+</body>
+</html>
