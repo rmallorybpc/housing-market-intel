@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Market Intelligence Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a5f7a;
+            border-bottom: 3px solid #1a5f7a;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2a7f9a;
+            margin-top: 30px;
+            border-left: 5px solid #1a5f7a;
+            padding-left: 15px;
+        }
+        .timestamp {
+            color: #666;
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .data-source {
+            background-color: #f9f9f9;
+            border-left: 4px solid #1a5f7a;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #1a5f7a;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            font-size: 12px;
+            color: #666;
+        }
+        a {
+            color: #1a5f7a;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Real Estate Market Intelligence Report</h1>
+        <p class="timestamp">Updated Weekly: Every Monday at 9:00 AM</p>
+        
+        <h2>Executive Summary</h2>
+        <div class="section">
+            <p>This comprehensive report analyzes the current real estate market landscape across key indicators including median home prices, inventory levels, delinquency trends, and housing supply dynamics.</p>
+            <p>The report is generated every Monday at 9:00 AM, synthesizing data from multiple authoritative sources to provide actionable market intelligence for real estate professionals and stakeholders.</p>
+        </div>
+        
+        <h2>Median Home Price Trends</h2>
+        <div class="section">
+            <div class="data-source">
+                <strong>Data Source:</strong> Redfin Market Tracker<br>
+                <strong>URL:</strong> <a href="https://redfin-public-data.s3.amazonaws.com/redfin_market_tracker/csv/latest/median_sale_price.csv" target="_blank">Redfin Public Data</a><br>
+                <strong>Metrics:</strong> Week-over-week and year-over-year median home price comparisons
+            </div>
+            <p>The Redfin dataset tracks median home prices across major markets, providing real-time insights into price trends and market movements. This data is crucial for understanding whether home values are appreciating or depreciating in key regions.</p>
+        </div>
+        
+        <h2>Supply vs Demand Indicators</h2>
+        <div class="section">
+            <div class="data-source">
+                <strong>Inventory Data:</strong> Realtor.com Research<br>
+                <strong>URL:</strong> <a href="https://www.realtor.com/research/data/" target="_blank">Realtor.com Research</a><br>
+                <strong>Housing Supply Data:</strong> U.S. Census Bureau<br>
+                <strong>API:</strong> <a href="https://api.census.gov/data/timeseries/eits/resconst.json" target="_blank">Census API</a>
+            </div>
+            <p>Key metrics include:</p>
+            <ul>
+                <li><strong>Active Listings:</strong> Count of properties currently on the market</li>
+                <li><strong>Inventory-to-Sales Ratio:</strong> Months of supply at current sales pace</li>
+                <li><strong>Vacancy Rates:</strong> Percentage of unoccupied residential units</li>
+                <li><strong>Construction Starts:</strong> Number of new residential construction projects initiated</li>
+                <li><strong>Permits Issued:</strong> Building permits for new residential construction</li>
+            </ul>
+        </div>
+        
+        <h2>Foreclosure & Delinquency Trends</h2>
+        <div class="section">
+            <div class="data-source">
+                <strong>Data Source:</strong> Consumer Financial Protection Bureau (CFPB)<br>
+                <strong>URL:</strong> <a href="https://files.consumerfinance.gov/mortgage-performance/trends/delinquency.csv" target="_blank">CFPB Delinquency Data</a><br>
+                <strong>Metrics:</strong> Mortgage delinquency rates and foreclosure indicators
+            </div>
+            <p>CFPB data tracks mortgage performance metrics including:</p>
+            <ul>
+                <li>Delinquency rates (30, 60, 90+ days)</li>
+                <li>Loan modification activity</li>
+                <li>Foreclosure initiation trends</li>
+                <li>Loss mitigation activities</li>
+            </ul>
+        </div>
+        
+        <h2>Mortgage Environment</h2>
+        <div class="section">
+            <p>The mortgage environment includes current lending standards, interest rate trends, and regulatory updates affecting the housing market. Key factors include:</p>
+            <ul>
+                <li><strong>Interest Rates:</strong> 30-year and 15-year mortgage rates</li>
+                <li><strong>50-Year Mortgages:</strong> Emerging products in the market</li>
+                <li><strong>Lending Standards:</strong> Credit requirements and down payment requirements</li>
+                <li><strong>Regulatory Changes:</strong> Updates to mortgage lending regulations and policies</li>
+                <li><strong>Monetary Policy:</strong> Federal Reserve actions and economic outlook</li>
+            </ul>
+            <div class="warning">
+                <strong>Note:</strong> Mortgage policy data and lending environment updates are monitored through current market research and regulatory announcements.
+            </div>
+        </div>
+        
+        <h2>Notable Regional & National Shifts</h2>
+        <div class="section">
+            <p>This section highlights significant market movements and notable changes in the real estate landscape:</p>
+            <ul>
+                <li><strong>National Price Trends:</strong> Overall median home price movements</li>
+                <li><strong>Regional Variations:</strong> Price differences across major metropolitan areas</li>
+                <li><strong>Supply/Demand Imbalances:</strong> Markets with tight inventory vs. oversupply</li>
+                <li><strong>Lending Environment Changes:</strong> Shifts in mortgage availability and terms</li>
+                <li><strong>Foreclosure Activity:</strong> Regional hot spots and trends</li>
+                <li><strong>Construction Activity:</strong> New supply coming to market</li>
+            </ul>
+        </div>
+        
+        <h2>Data Source Notes</h2>
+        <div class="section">
+            <table>
+                <tr>
+                    <th>Data Source</th>
+                    <th>Type</th>
+                    <th>Update Frequency</th>
+                    <th>Coverage</th>
+                </tr>
+                <tr>
+                    <td>Redfin Market Tracker</td>
+                    <td>CSV</td>
+                    <td>Weekly</td>
+                    <td>National & Regional</td>
+                </tr>
+                <tr>
+                    <td>Realtor.com Research</td>
+                    <td>CSV/Web</td>
+                    <td>Weekly/Monthly</td>
+                    <td>National & Regional</td>
+                </tr>
+                <tr>
+                    <td>CFPB Mortgage Performance</td>
+                    <td>CSV</td>
+                    <td>Monthly</td>
+                    <td>National</td>
+                </tr>
+                <tr>
+                    <td>U.S. Census Bureau API</td>
+                    <td>JSON</td>
+                    <td>Monthly/Quarterly</td>
+                    <td>National</td>
+                </tr>
+                <tr>
+                    <td>Mortgage Policy & Lending</td>
+                    <td>Research</td>
+                    <td>Real-time</td>
+                    <td>National</td>
+                </tr>
+            </table>
+            <h3>Report Methodology</h3>
+            <p>This report synthesizes data from multiple authoritative public sources to provide comprehensive market intelligence. Data is accessed via public CSV downloads and API endpoints. All sources are open and accessible for independent verification.</p>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Automated Report Generation:</strong> This report is automatically generated every Monday at 9:00 AM and published to GitHub Pages.</p>
+            <p><strong>Repository:</strong> <a href="https://github.com/rmallorybpc/housing-market-intel" target="_blank">rmallorybpc/housing-market-intel</a></p>
+            <p><strong>Last Updated:</strong> See Git commit history for exact timestamps</p>
+            <p><em>Built with Zapier • Free Tier Features Only</em></p>
+        </div>
+    </div>
+</body>
+</html>
