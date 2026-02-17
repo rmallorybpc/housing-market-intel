@@ -15,8 +15,8 @@ A scheduled Zapier automation runs weekly and performs the following:
 1. Fetches updated datasets from Redfin, Realtor.com, CFPB, and Census APIs  
 2. Performs an AI‑powered search for mortgage‑policy and lending‑environment updates  
 3. Generates a structured HTML report using a custom prompt  
-4. Publishes the report to this repository as `index.html`  
-5. GitHub Pages serves the report publicly
+4. Publishes the report to this repository as `report.txt`  
+5. `index.html` loads `report.txt`, and GitHub Pages serves the report publicly
 
 ## Purpose
 This project provides a consistent, automated view of macro‑level housing conditions, helping analysts, researchers, and market observers track shifts in pricing, supply, demand, and mortgage policy with minimal manual effort.

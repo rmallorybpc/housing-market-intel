@@ -3,244 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly Real Estate Market Intelligence Report</title>
+    <title>Real Estate Market Intelligence Report</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 24px;
             background-color: #f5f5f5;
+            color: #333;
         }
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background-color: #fff;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
+            color: #1a5f7a;
+            margin: 0 0 12px;
         }
-        h2 {
-            color: #34495e;
-            border-left: 4px solid #3498db;
-            padding-left: 15px;
-            margin-top: 30px;
+        .muted {
+            color: #666;
+            margin: 0 0 16px;
         }
-        h3 {
-            color: #2c3e50;
-            margin-top: 25px;
+        a {
+            color: #1a5f7a;
         }
-        .timestamp {
-            text-align: center;
-            color: #7f8c8d;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-        .metric-box {
-            background-color: #ecf0f1;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border-left: 4px solid #3498db;
-        }
-        .positive {
-            border-left-color: #27ae60;
-            background-color: #d5f4e6;
-        }
-        .negative {
-            border-left-color: #e74c3c;
-            background-color: #fdeaea;
-        }
-        .neutral {
-            border-left-color: #f39c12;
-            background-color: #fef9e7;
-        }
-        .data-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .summary-box {
-            background-color: #3498db;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        .source-note {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: #6c757d;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
+        pre {
+            background-color: #f9f9f9;
             padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #3498db;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+            border-radius: 6px;
+            overflow-x: auto;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Weekly Real Estate Market Intelligence Report</h1>
-        <div class="timestamp">Updated Weekly: February 4, 2026</div>
-
-        <div class="summary-box">
-            <h2 style="color: white; border: none; padding: 0; margin-top: 0;">Executive Summary</h2>
-            <p>The U.S. housing market continues to show mixed signals in early 2026. While inventory levels have increased significantly (+9.2% year-over-year), median home prices are experiencing a modest decline (-2.0% YoY) for the first time in several years. The mortgage environment remains dynamic with the Trump administration's proposed 50-year mortgage terms under consideration, potentially reshaping affordability calculations. Delinquency rates remain historically low, indicating continued borrower stability despite economic uncertainties.</p>
-        </div>
-
-        <h2>Median Home Price Trends</h2>
-        <div class="data-grid">
-            <div class="metric-box negative">
-                <h3>National Median Listing Price</h3>
-                <p><strong>Year-over-Year Change: -2.00%</strong></p>
-                <p>First negative YoY change in median listing prices since 2019, indicating a potential market correction and improved affordability for buyers.</p>
-            </div>
-            <div class="metric-box positive">
-                <h3>Active Listing Inventory</h3>
-                <p><strong>Year-over-Year Change: +9.20%</strong></p>
-                <p>Significant increase in available inventory provides more options for buyers and reduces competitive pressure in most markets.</p>
-            </div>
-            <div class="metric-box neutral">
-                <h3>Days on Market</h3>
-                <p><strong>Current: 6 days (YoY: +8.3%)</strong></p>
-                <p>Properties are staying on the market slightly longer, indicating a more balanced market compared to the seller's market of recent years.</p>
-            </div>
-        </div>
-
-        <h2>Foreclosure & Delinquency Trends</h2>
-        <div class="metric-box positive">
-            <h3>National Delinquency Rates (30-89 Days)</h3>
-            <p><strong>Current Rate: 1.9% (March 2025)</strong></p>
-            <p>Mortgage delinquency rates remain near historic lows, with the national 30-89 day delinquency rate at 1.9%. This represents continued borrower stability and effective lending standards.</p>
-        </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Region</th>
-                    <th>30-89 Day Delinquency Rate</th>
-                    <th>Trend</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>National Average</td>
-                    <td>1.9%</td>
-                    <td>Stable</td>
-                </tr>
-                <tr>
-                    <td>California</td>
-                    <td>1.2%</td>
-                    <td>Below National Average</td>
-                </tr>
-                <tr>
-                    <td>Florida</td>
-                    <td>2.0%</td>
-                    <td>Slightly Above Average</td>
-                </tr>
-                <tr>
-                    <td>Texas</td>
-                    <td>1.8%</td>
-                    <td>Below National Average</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>Mortgage Environment</h2>
-        <div class="data-grid">
-            <div class="metric-box neutral">
-                <h3>50-Year Mortgage Proposal</h3>
-                <p>The Trump administration is actively considering 50-year mortgage terms to improve affordability. FHFA Director Bill Pulte has acknowledged ongoing efforts, though implementation faces regulatory hurdles.</p>
-                <p><strong>Potential Impact:</strong> Lower monthly payments but significantly higher total interest costs over the loan term.</p>
-            </div>
-            <div class="metric-box positive">
-                <h3>Conforming Loan Limits 2026</h3>
-                <p>FHFA announced updated conforming loan limit values for 2026, allowing borrowers in many areas to qualify for larger conforming mortgages without shifting to jumbo loan financing.</p>
-            </div>
-        </div>
-
-        <div class="metric-box neutral">
-            <h3>Regulatory Streamlining</h3>
-            <p>New regulatory changes focus on recalibrating AML and Bank Secrecy Act (BSA) compliance requirements, with emphasis on reducing administrative burden while maintaining consumer protections.</p>
-        </div>
-
-        <h2>Supply vs Demand Indicators</h2>
-        <div class="data-grid">
-            <div class="metric-box positive">
-                <h3>New Listing Activity</h3>
-                <p><strong>YoY Change: +3.2%</strong></p>
-                <p>Increased new listing activity suggests sellers are more confident in market conditions and pricing.</p>
-            </div>
-            <div class="metric-box negative">
-                <h3>Price Reduction Activity</h3>
-                <p><strong>YoY Change: -0.4%</strong></p>
-                <p>Slight decrease in price reductions indicates sellers are pricing more realistically from the start.</p>
-            </div>
-        </div>
-
-        <h2>Notable Regional/National Shifts</h2>
-        <div class="metric-box">
-            <h3>Market Rebalancing</h3>
-            <p>The housing market is experiencing a significant rebalancing after years of extreme seller advantage. Key indicators include:</p>
-            <ul>
-                <li>First year-over-year price decline since 2019</li>
-                <li>Inventory levels returning to more normal ranges</li>
-                <li>Reduced bidding wars and competitive offers</li>
-                <li>Longer days on market providing buyers more time to decide</li>
-            </ul>
-        </div>
-
-        <div class="metric-box neutral">
-            <h3>Policy Environment</h3>
-            <p>The new administration's housing policies are taking shape with focus on:</p>
-            <ul>
-                <li>Innovative mortgage products (50-year terms)</li>
-                <li>Potential use of retirement funds for down payments</li>
-                <li>Regulatory streamlining to reduce costs</li>
-                <li>Emphasis on increasing homeownership rates</li>
-            </ul>
-        </div>
-
-        <h2>Data Source Notes</h2>
-        <div class="source-note">
-            <h3>Data Sources & Methodology</h3>
-            <p><strong>Realtor.com Weekly Housing Market Data:</strong> National housing inventory and pricing data through January 24, 2026. Data includes median listing prices, active inventory counts, days on market, and year-over-year comparisons.</p>
-            
-            <p><strong>CFPB Mortgage Performance Data:</strong> Consumer Financial Protection Bureau mortgage delinquency data through March 2025, covering 30-89 day delinquency rates by state and national averages.</p>
-            
-            <p><strong>Policy & Regulatory Updates:</strong> Information compiled from FHFA announcements, industry publications, and regulatory guidance documents regarding mortgage policy changes and proposed reforms.</p>
-            
-            <p><strong>Data Limitations:</strong> Some data sources may have different reporting periods. Market conditions can change rapidly, and this report reflects information available as of the publication date.</p>
-            
-            <p><strong>Attribution:</strong> Data provided by Realtor.com®, Consumer Financial Protection Bureau, Federal Housing Finance Agency, and various industry sources. Analysis and synthesis by Housing Market Intelligence.</p>
-        </div>
-
-        <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #7f8c8d;">
-            <p>© 2026 Housing Market Intelligence | Updated Weekly Every Monday</p>
-        </div>
+    <div class="container" id="report-shell">
+        <h1>Real Estate Market Intelligence Report</h1>
+        <p class="muted">Loading report content from report.txt...</p>
+        <p class="muted" id="report-timestamp"></p>
+        <p class="muted">If loading does not complete, open <a href="report.txt">report.txt</a> directly.</p>
+        <pre id="report-error" style="display: none;"></pre>
     </div>
+    <script>
+        const timestamp = document.getElementById("report-timestamp");
+        const now = new Date();
+        timestamp.textContent = "Loader timestamp: " + now.toLocaleString();
+
+        fetch("report.txt", { cache: "no-store" })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Report fetch failed: " + response.status + " " + response.statusText);
+                }
+                return response.text();
+            })
+            .then((html) => {
+                document.open();
+                document.write(html);
+                document.close();
+            })
+            .catch((error) => {
+                const errorBox = document.getElementById("report-error");
+                errorBox.style.display = "block";
+                errorBox.textContent = error.message;
+            });
+    </script>
 </body>
 </html>
