@@ -265,5 +265,28 @@
             <p><strong>Next Update:</strong> This report is updated weekly every Monday at 9:00 AM UTC with the latest available data.</p>
         </div>
     </div>
+    <script>
+        const timestamp = document.getElementById("report-timestamp");
+        const now = new Date();
+        timestamp.textContent = "Loader timestamp: " + now.toLocaleString();
+
+        fetch("report.txt", { cache: "no-store" })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Report fetch failed: " + response.status + " " + response.statusText);
+                }
+                return response.text();
+            })
+            .then((html) => {
+                document.open();
+                document.write(html);
+                document.close();
+            })
+            .catch((error) => {
+                const errorBox = document.getElementById("report-error");
+                errorBox.style.display = "block";
+                errorBox.textContent = error.message;
+            });
+    </script>
 </body>
 </html>
