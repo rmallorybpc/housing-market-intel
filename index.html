@@ -3,290 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Market Intelligence Report</title>
+    <title>Weekly Real Estate Market Report - Housing Market Intelligence</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .header h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.5em;
-        }
-        .timestamp {
-            background: #e9ecef;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            margin-bottom: 30px;
-            font-weight: bold;
-            color: #495057;
-        }
-        .section {
-            margin: 30px 0;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 5px solid #667eea;
-            background: #f8f9fa;
-        }
-        .section h2 {
-            color: #495057;
-            margin-top: 0;
-            font-size: 1.8em;
-        }
-        .metric-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .metric-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-left: 4px solid #28a745;
-        }
-        .metric-card.warning {
-            border-left-color: #ffc107;
-        }
-        .metric-card.danger {
-            border-left-color: #dc3545;
-        }
-        .metric-value {
-            font-size: 2em;
-            font-weight: bold;
-            color: #495057;
-        }
-        .metric-label {
-            color: #6c757d;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-        .trend-up {
-            color: #28a745;
-        }
-        .trend-down {
-            color: #dc3545;
-        }
-        .data-sources {
-            background: #343a40;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-        .data-sources h3 {
-            margin-top: 0;
-        }
-        .data-sources a {
-            color: #adb5bd;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin: 8px 0;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background: #f8f9fa; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px 10px 0 0; text-align: center; }
+        .header h1 { margin: 0; font-size: 2.5em; font-weight: 300; }
+        .header h2 { margin: 10px 0 0 0; font-size: 1.2em; opacity: 0.9; }
+        .timestamp { text-align: center; color: #6c757d; font-style: italic; margin: 20px 0; }
+        .content { padding: 30px; }
+        .section { margin-bottom: 40px; }
+        .section h2 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 20px; }
+        .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .metric-card { background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #3498db; }
+        .metric-value { font-size: 2em; font-weight: bold; color: #2c3e50; }
+        .metric-change { font-size: 0.9em; margin-top: 5px; }
+        .positive { color: #27ae60; }
+        .negative { color: #e74c3c; }
+        .neutral { color: #f39c12; }
+        .highlight-box { background: #e8f4fd; border: 1px solid #bee5eb; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .policy-alert { background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .data-source { background: #f1f3f4; padding: 15px; border-radius: 5px; margin: 10px 0; font-size: 0.9em; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .footer { background: #2c3e50; color: white; padding: 20px; text-align: center; border-radius: 0 0 10px 10px; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🏠 Real Estate Market Intelligence Report</h1>
-            <p>Comprehensive Housing Market Analysis & Trends</p>
+            <h1>Weekly Real Estate Market Report</h1>
+            <h2>Comprehensive Housing Market Intelligence</h2>
         </div>
         
         <div class="timestamp">
-            📅 Updated Weekly: February 17, 2026 at 01:00 UTC
+            Updated Weekly: February 23, 2026 9:00 AM UTC
         </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>📊 Executive Summary</h2>
+                <p>The U.S. housing market continues to show signs of stabilization in early 2026, with mixed signals across key indicators. While inventory levels have improved year-over-year, pricing pressures persist amid evolving mortgage policy landscape and regulatory changes.</p>
+                
+                <div class="highlight-box">
+                    <h3>Key Market Highlights</h3>
+                    <ul>
+                        <li><strong>Inventory Recovery:</strong> Active listings up 10.05% year-over-year, providing more options for buyers</li>
+                        <li><strong>Price Stabilization:</strong> Median home prices showing modest declines (-0.15% YoY) after years of rapid growth</li>
+                        <li><strong>Market Rebalancing:</strong> Days on market increasing, giving buyers more negotiating power</li>
+                        <li><strong>Policy Shifts:</strong> Significant regulatory changes affecting lending standards and mortgage accessibility</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="section">
-            <h2>📊 Executive Summary</h2>
-            <p>The U.S. housing market continues to show mixed signals in early 2026, with inventory levels rising while median prices remain relatively stable. Key indicators suggest a gradual shift toward a more balanced market after years of extreme seller advantage.</p>
-            
-            <div class="metric-grid">
-                <div class="metric-card">
-                    <div class="metric-value">$399,900</div>
-                    <div class="metric-label">National Median Listing Price</div>
+            <div class="section">
+                <h2>🏠 Median Home Price Trends</h2>
+                <div class="metric-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">$399,900</div>
+                        <div>National Median Price (Jan 2026)</div>
+                        <div class="metric-change negative">↓ 0.15% Year-over-Year</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">78 Days</div>
+                        <div>Median Days on Market</div>
+                        <div class="metric-change positive">↑ 6.85% from Previous Year</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">$220/sqft</div>
+                        <div>Price per Square Foot</div>
+                        <div class="metric-change negative">↓ 1.61% Year-over-Year</div>
+                    </div>
                 </div>
-                <div class="metric-card warning">
-                    <div class="metric-value">78 days</div>
-                    <div class="metric-label">Median Days on Market <span class="trend-up">(+6.8% MoM)</span></div>
+                
+                <p>Home prices are showing the first signs of meaningful deceleration after years of rapid appreciation. The slight year-over-year decline in median prices, combined with increased time on market, suggests a more balanced environment between buyers and sellers.</p>
+            </div>
+
+            <div class="section">
+                <h2>⚖️ Foreclosure & Delinquency Trends</h2>
+                <div class="metric-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">1.9%</div>
+                        <div>National 30-89 Day Delinquency Rate</div>
+                        <div class="metric-change neutral">March 2025 Data</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">Low Risk</div>
+                        <div>Overall Delinquency Trend</div>
+                        <div class="metric-change positive">Stable vs. Historical Averages</div>
+                    </div>
                 </div>
-                <div class="metric-card">
-                    <div class="metric-value">912,696</div>
-                    <div class="metric-label">Active Listings <span class="trend-up">(+10.05% YoY)</span></div>
+                
+                <p>Mortgage delinquency rates remain at historically low levels, with the national 30-89 day delinquency rate at 1.9% as of March 2025. This reflects continued strong employment conditions and borrower resilience, though monitoring will be crucial as economic conditions evolve.</p>
+                
+                <div class="data-source">
+                    <strong>Source:</strong> Consumer Financial Protection Bureau (CFPB) Mortgage Performance Data through March 2025
                 </div>
-                <div class="metric-card danger">
-                    <div class="metric-value">1.9%</div>
-                    <div class="metric-label">National 30-89 Day Delinquency Rate</div>
+            </div>
+
+            <div class="section">
+                <h2>💰 Mortgage Environment</h2>
+                
+                <div class="policy-alert">
+                    <h3>🚨 Major Policy Developments</h3>
+                    <ul>
+                        <li><strong>50-Year Mortgage Proposal:</strong> Trump administration exploring extended-term mortgages to improve affordability</li>
+                        <li><strong>Credit Card Rate Cap:</strong> Proposed 10% temporary cap on credit card interest rates</li>
+                        <li><strong>Fed Policy Signals:</strong> Federal Reserve indicating openness to revisiting mortgage lending rules</li>
+                        <li><strong>CFPB Changes:</strong> Significant regulatory rollbacks and funding structure modifications</li>
+                        <li><strong>Fair Housing Updates:</strong> HUD proposing removal of disparate impact rule</li>
+                    </ul>
+                </div>
+                
+                <p>The mortgage environment is experiencing significant regulatory flux. The proposed 50-year mortgage option could reduce monthly payments but increase long-term costs. Meanwhile, CFPB policy changes and potential Fed rule modifications may affect lending standards and credit accessibility.</p>
+            </div>
+
+            <div class="section">
+                <h2>📈 Supply vs Demand Indicators</h2>
+                <div class="metric-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">912,696</div>
+                        <div>Active Listings (National)</div>
+                        <div class="metric-change positive">↑ 10.05% Year-over-Year</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">329,228</div>
+                        <div>New Listings (January)</div>
+                        <div class="metric-change positive">↑ 0.68% Year-over-Year</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">7.2%</div>
+                        <div>Rental Vacancy Rate</div>
+                        <div class="metric-change neutral">Q4 2025</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">1.2%</div>
+                        <div>Homeowner Vacancy Rate</div>
+                        <div class="metric-change neutral">Q4 2025</div>
+                    </div>
+                </div>
+                
+                <p>Supply conditions continue to improve with active inventory up over 10% year-over-year. The rental vacancy rate of 7.2% and homeowner vacancy rate of 1.2% indicate a relatively balanced market, though regional variations persist.</p>
+                
+                <div class="highlight-box">
+                    <h3>Market Balance Indicators</h3>
+                    <ul>
+                        <li><strong>Homeownership Rate:</strong> 65.7% (Q4 2025) - stable from previous year</li>
+                        <li><strong>Pending Ratio:</strong> 34.25% of active listings under contract</li>
+                        <li><strong>Price Reductions:</strong> 14.32% of listings experienced price cuts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🌍 Notable Regional/National Shifts</h2>
+                <ul>
+                    <li><strong>Inventory Normalization:</strong> Most markets seeing return to more typical inventory levels after years of severe shortages</li>
+                    <li><strong>Regional Price Variations:</strong> Coastal markets showing more pronounced price adjustments while Midwest remains relatively stable</li>
+                    <li><strong>Policy Impact Zones:</strong> Markets with high regulatory exposure may see increased volatility as new policies take effect</li>
+                    <li><strong>Affordability Initiatives:</strong> Various state and local programs emerging to address housing affordability challenges</li>
+                    <li><strong>Construction Activity:</strong> New residential construction showing mixed signals with regional variations in permit activity</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>📋 Data Source Notes</h2>
+                <div class="data-source">
+                    <strong>Primary Data Sources:</strong>
+                    <ul>
+                        <li><strong>Realtor.com:</strong> National inventory metrics, listing data, and market trends (January 2026)</li>
+                        <li><strong>Redfin:</strong> Housing market data, price trends, and regional analysis</li>
+                        <li><strong>CFPB:</strong> Mortgage performance and delinquency data through March 2025</li>
+                        <li><strong>U.S. Census Bureau:</strong> Housing vacancy rates and homeownership statistics (Q4 2025)</li>
+                        <li><strong>Federal Reserve:</strong> Monetary policy updates and lending standard guidance</li>
+                        <li><strong>Industry Reports:</strong> Mortgage banking updates and regulatory analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="data-source">
+                    <strong>Methodology:</strong> This report synthesizes data from multiple authoritative sources to provide comprehensive market intelligence. All data points are sourced from official government agencies, licensed real estate platforms, and established financial institutions. Regional variations may not be fully captured in national aggregates.
                 </div>
             </div>
         </div>
-
-        <div class="section">
-            <h2>🏡 Median Home Price Trends</h2>
-            <p>Home prices show regional variation with national stability. The median listing price of $399,900 represents minimal month-over-month change (-0.01%) but a slight year-over-year decline (-0.15%).</p>
-            
-            <h3>Key Price Indicators:</h3>
-            <ul>
-                <li><strong>National Median:</strong> $399,900 (stable)</li>
-                <li><strong>Price per Square Foot:</strong> $220 (+0.16% MoM, -1.61% YoY)</li>
-                <li><strong>Average Listing Price:</strong> $700,102 (+0.22% MoM, -1.69% YoY)</li>
-                <li><strong>Regional Variation:</strong> Significant differences between metro areas</li>
-            </ul>
-            
-            <p><strong>Analysis:</strong> Price stability suggests the market is finding equilibrium after years of rapid appreciation. The slight year-over-year decline indicates a cooling from peak levels while avoiding dramatic corrections.</p>
-        </div>
-
-        <div class="section">
-            <h2>⚖️ Foreclosure & Delinquency Trends</h2>
-            <p>Mortgage performance remains relatively stable with delinquency rates at manageable levels, though regional variations exist.</p>
-            
-            <h3>Current Delinquency Rates (March 2025 Data):</h3>
-            <ul>
-                <li><strong>30-89 Days Delinquent:</strong> 1.9% nationally</li>
-                <li><strong>90+ Days Delinquent:</strong> Available by state and metro area</li>
-                <li><strong>Trend:</strong> Relatively stable compared to historical averages</li>
-                <li><strong>Geographic Variation:</strong> Higher rates in certain states and metro areas</li>
-            </ul>
-            
-            <p><strong>Analysis:</strong> Delinquency rates remain well below crisis levels, indicating overall mortgage market stability despite economic uncertainties.</p>
-        </div>
-
-        <div class="section">
-            <h2>💰 Mortgage Environment</h2>
-            <p>Significant regulatory changes are reshaping the mortgage landscape in 2026, with new policies aimed at increasing bank participation and adjusting lending standards.</p>
-            
-            <h3>Key Policy Updates for 2026:</h3>
-            <ul>
-                <li><strong>Federal Reserve Changes:</strong> New capital requirements to revive banks' mortgage role</li>
-                <li><strong>Conforming Loan Limits:</strong> Increased to $832,750 for most areas (+$26,250 from 2025)</li>
-                <li><strong>CFPB Threshold Adjustments:</strong> Truth in Lending exemption threshold raised to $73,400</li>
-                <li><strong>HMDA Reporting:</strong> Asset-size exemption threshold adjusted to $59 million</li>
-                <li><strong>Appraisal Thresholds:</strong> Updated requirements for higher-priced mortgage loans</li>
-            </ul>
-            
-            <p><strong>Analysis:</strong> These regulatory changes signal government efforts to increase lending capacity and standardize requirements, potentially improving mortgage availability.</p>
-        </div>
-
-        <div class="section">
-            <h2>📈 Supply vs Demand Indicators</h2>
-            <p>The market is experiencing a notable shift in supply-demand dynamics, with inventory levels rising and buyer competition moderating.</p>
-            
-            <div class="metric-grid">
-                <div class="metric-card">
-                    <div class="metric-value">329,228</div>
-                    <div class="metric-label">New Listings <span class="trend-up">(+41.04% MoM)</span></div>
-                </div>
-                <div class="metric-card warning">
-                    <div class="metric-value">14.32%</div>
-                    <div class="metric-label">Price Reduction Share</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">34.25%</div>
-                    <div class="metric-label">Pending Ratio</div>
-                </div>
-            </div>
-            
-            <h3>Supply Indicators:</h3>
-            <ul>
-                <li><strong>Active Inventory:</strong> Up 10.05% year-over-year</li>
-                <li><strong>New Listings:</strong> Significant monthly increase of 41.04%</li>
-                <li><strong>Months of Supply:</strong> Increasing, indicating more balanced conditions</li>
-            </ul>
-            
-            <h3>Demand Indicators:</h3>
-            <ul>
-                <li><strong>Pending Sales:</strong> Moderate activity levels</li>
-                <li><strong>Days on Market:</strong> Extended to 78 days</li>
-                <li><strong>Price Reductions:</strong> 14.32% of listings have reduced prices</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>🌍 Notable Regional/National Shifts</h2>
-            <p>The housing market is experiencing significant geographic variation, with some regions showing strength while others face challenges.</p>
-            
-            <h3>National Trends:</h3>
-            <ul>
-                <li><strong>Inventory Normalization:</strong> Active listings increasing across most markets</li>
-                <li><strong>Seasonal Patterns:</strong> Early 2026 showing typical seasonal adjustments</li>
-                <li><strong>Buyer Behavior:</strong> More selective and price-conscious purchasing decisions</li>
-                <li><strong>Seller Adjustments:</strong> Increased willingness to negotiate and reduce prices</li>
-            </ul>
-            
-            <h3>Regional Variations:</h3>
-            <ul>
-                <li><strong>High-Growth Markets:</strong> Continued strength in select metro areas</li>
-                <li><strong>Cooling Markets:</strong> Price adjustments in previously overheated regions</li>
-                <li><strong>Affordability Challenges:</strong> Persistent issues in high-cost coastal areas</li>
-                <li><strong>Migration Patterns:</strong> Continued movement toward more affordable regions</li>
-            </ul>
-        </div>
-
-        <div class="data-sources">
-            <h3>📋 Data Source Notes</h3>
-            <p>This report synthesizes data from multiple authoritative sources to provide comprehensive market intelligence:</p>
-            
-            <ul>
-                <li><strong>Redfin:</strong> Weekly and monthly housing market data including prices, inventory, and market trends</li>
-                <li><strong>Realtor.com:</strong> National inventory metrics, listing data, and market hotness indicators</li>
-                <li><strong>Consumer Financial Protection Bureau (CFPB):</strong> Mortgage performance and delinquency data through March 2025</li>
-                <li><strong>Federal Agencies:</strong> Regulatory updates and policy changes affecting mortgage markets</li>
-                <li><strong>U.S. Census Bureau:</strong> Housing vacancy rates and construction data</li>
-            </ul>
-            
-            <p><strong>Data Freshness:</strong> Most recent data available as of February 2026. Some indicators may have reporting delays of 30-90 days.</p>
-            
-            <p><strong>Methodology:</strong> Data is aggregated and analyzed to identify trends, with year-over-year and month-over-month comparisons where available.</p>
-            
-            <p><strong>Next Update:</strong> This report is updated weekly every Monday at 9:00 AM UTC with the latest available data.</p>
+        
+        <div class="footer">
+            <p>Weekly Real Estate Market Report | Housing Market Intelligence Platform</p>
+            <p>Next Update: March 2, 2026 9:00 AM UTC</p>
         </div>
     </div>
-    <script>
-        const timestamp = document.getElementById("report-timestamp");
-        const now = new Date();
-        timestamp.textContent = "Loader timestamp: " + now.toLocaleString();
-
-        fetch("report.txt", { cache: "no-store" })
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error("Report fetch failed: " + response.status + " " + response.statusText);
-                }
-                return response.text();
-            })
-            .then((html) => {
-                document.open();
-                document.write(html);
-                document.close();
-            })
-            .catch((error) => {
-                const errorBox = document.getElementById("report-error");
-                errorBox.style.display = "block";
-                errorBox.textContent = error.message;
-            });
-    </script>
 </body>
 </html>
